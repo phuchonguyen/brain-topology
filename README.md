@@ -19,6 +19,6 @@ Below are the descriptions of folders in this repository:
 
 * Folder `tools` includes code to convert a matrix of brain connections to our tree representation based on the Desikan-Killiany protocol and plotting fuctions to create a chordplot unique to our representation.
 
-* Folder `data` includes data files use for tree construction and analysis of the Human Connectome Project.
+* Folder `data` includes data files used for tree construction and the Human Connectome Project's diffusion and structural MRI data. Some of the traits data in our analyses are restrictive. Interested readers may refer to [ConnectomeDB](https://wiki.humanconnectome.org/display/PublicData/How+to+Access+Data+on+ConnectomeDB) to gain access to download these files.
 
 * Folder `paper` includes code to reproduce figures and analyses in our paper.

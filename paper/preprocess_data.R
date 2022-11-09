@@ -11,10 +11,14 @@ FIBER_COUNT <- 1
 brain <- read.mat("data/HCP_cortical_TensorData_desikan.mat")  # R.matlab is too slow with this
 traits <- readMat("data/HCP_Covariates.mat")  # R.matlab works with this but rmatio doesn't
 
+# save brain$mode3[["count"]] (the number of connecting fibers)
+nets_mat <- brain[["loaded_tensor"]][,,1,]
+writeMat("data/matrices.mat", matrices = nets_mat)
+
 # Convert connectomes into trees
 # brain$mode3[["count"]] is the number of connecting fibers
 feat <- FIBER_COUNT
-ctm <- apply(brain$loaded_tensor[,,feat,], 3, make_tree)
+ctm <- apply(nets_mat, 3, make_tree)
 ctm <- t(ctm)
 rownames(ctm) <- brain$all_id
 saveRDS(ctm, file = "data/Desikan_Cortical_Tree_Fiber_Weights.Rds")

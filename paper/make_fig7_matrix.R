@@ -14,7 +14,7 @@ source("tools/tree_to_mat.R")
 set.seed(123)
 
 # Load adjacency matrices
-nets_mat <- read.mat("data/HCP_cortical_TensorData_desikan.mat")[["loaded_tensor"]][,,1,]
+nets_mat <- readMat("data/matrices.mat")[[1]]
 nets <- t(apply(nets_mat, 3, as.vector))
 # Remove the columns with zero variance
 id_novar <- which(apply(nets, 2, var) == 0)

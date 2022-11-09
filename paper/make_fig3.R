@@ -8,7 +8,7 @@ source("tools/tree_to_mat.R")
 cog <- readRDS("data/CogMeasure_Aligned.Rds")
 
 # Load adjacency matrices
-nets_mat <- read.mat("data/HCP_cortical_TensorData_desikan.mat")[["loaded_tensor"]][,,1,]
+nets_mat <- readMat("data/matrices.mat")[[1]]
 
 # Given value [0,1], return an RGB value for a colour on the given ramp
 map_colors<-colorRamp(viridis(50))
