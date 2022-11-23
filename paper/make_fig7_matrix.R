@@ -1,4 +1,10 @@
-# Regress traits on PCA of vectorized adjacency matrix
+# Regress traits on PCA of vectorized adjacency matrix and plot significant
+# connections
+# Figure 7 in Tree Representations of Brain Structural Connectivity via 
+# Persistent Homology by D. Li, P. Nguyen, Z. Zhang and D. Dunson
+#
+# Author: Phuc Nguyen, Aug. 2022
+
 library(R.matlab)
 library(rmatio)
 library(tidyverse)

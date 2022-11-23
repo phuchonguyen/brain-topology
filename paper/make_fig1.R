@@ -1,4 +1,9 @@
-# Make figure to explain what the tree is
+# Make figure to explain what the Tree Representation based on Desikan-Killiany
+# atlas looks like
+# Figure 1 in Tree Representations of Brain Structural Connectivity via 
+# Persistent Homology by D. Li, P. Nguyen, Z. Zhang and D. Dunson
+#
+# Author: Phuc Nguyen, Aug. 2022
 
 library(brainconn)
 library(ggplot2)

@@ -1,3 +1,10 @@
+# Circle Chord Plot for Tree Representation of Brain Connectomes
+# This code plots circle chord plot for the Tree Representations of 
+# Brain Structural Connectivity via Persistent Homology by D. Li, P. Nguyen, 
+# Z. Zhang and D. Dunson
+#
+# Author: Phuc Nguyen, Aug. 2020
+
 library(circlize)
 library(rmatio)
 library(tidyverse)

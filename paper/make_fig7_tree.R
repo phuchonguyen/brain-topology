@@ -1,4 +1,11 @@
-# Load pacakges
+# Regress traits on non-zero tree nodes and plot significant
+# connections
+# Figure 7 in Tree Representations of Brain Structural Connectivity via 
+# Persistent Homology by D. Li, P. Nguyen, Z. Zhang and D. Dunson
+#
+# Author: Phuc Nguyen, Aug. 2022
+
+
 library(tidyverse)
 library(BMS)
 library(R.matlab)
@@ -9,7 +16,6 @@ source("tools/tree_to_mat.R")
 
 set.seed(1)
 
-# Load trees
 trees <- readMat("data/trees.mat")[[1]]
 colnames(trees) <- NAME
 strees <- trees[, colSums(trees==0)!=1065] # remove columns with only 0 entries
@@ -216,7 +222,6 @@ vi_mod <- fit_bms_yid(45, use_sum = F, scale = T)
 svglite::svglite(paste0("figures/fig7/Visual Inhibitor ", PIP_THRES, CONSIDER_SE, ".svg"), 
                  width = 7, height = 5.5,
                  bg=transparent_bg)
-#plot_bms(fit_bms_yid(y_id), title = "Visual Inhibitor")
 plot_bms_nosum(vi_mod, title = "Visual Inhibitor", 
                consider.se = CONSIDER_SE, pip.thres = PIP_THRES)
 dev.off()
@@ -240,8 +245,6 @@ svglite::svglite(paste0("figures/fig7/Tree Fluid Intelligence ", PIP_THRES, CONS
                  bg=transparent_bg)
 plot_bms_nosum(fi_mod, title = "Fluid Intelligence", 
                consider.se = CONSIDER_SE, pip.thres = PIP_THRES)
-# plot_bms_nosum(fi_mod, title = "Fluid Intelligence", pip.thres = 1.0,
-#                consider.se = T)
 dev.off()
 
 
@@ -265,8 +268,6 @@ svglite::svglite(paste0("figures/fig7/Tree Spatial Orientation ", PIP_THRES, CON
                  bg=transparent_bg)
 plot_bms_nosum(so_mod, title = "Spatial Orientation",
                consider.se = CONSIDER_SE, pip.thres = PIP_THRES)
-# plot_bms_nosum(so_mod, title = "Spatial Orientation", pip.thres = 1,
-#                consider.se = T)
 dev.off()
 
 
@@ -285,8 +286,6 @@ svglite::svglite(paste0("figures/fig7/Oral Reading ", PIP_THRES, CONSIDER_SE, ".
                  bg=transparent_bg)
 plot_bms_nosum(or_mod, title = "Oral Reading Recognition", 
                consider.se = CONSIDER_SE, pip.thres = PIP_THRES)
-# plot_bms_nosum(or_mod, title = "Oral Reading Recognition", pip.thres = 1,
-#                consider.se = T)
 dev.off()
 
 
@@ -301,7 +300,6 @@ pv_mod <- fit_bms_yid(7, use_sum = F, scale = T)
 svglite::svglite(paste0("figures/fig7/Picture Vocabulary ", PIP_THRES, CONSIDER_SE, ".svg"),
                  width = 7, height = 5.5,
                  bg=transparent_bg)
-#plot_bms(fit_bms_yid(y_id), title = "Picture Vocabulary")
 plot_bms_nosum(pv_mod, title = "Picture Vocabulary", 
                consider.se = CONSIDER_SE, pip.thres = PIP_THRES)
 dev.off()

@@ -1,3 +1,10 @@
+# Canonical Correlation Analysis comparing performance of Tree vs. Adjacency Matrix
+# representation of brain connectiomes
+# Figure 4 in Tree Representations of Brain Structural Connectivity via 
+# Persistent Homology by D. Li, P. Nguyen, Z. Zhang and D. Dunson
+#
+# Author: Phuc Nguyen, Aug. 2022
+
 library(R.matlab)
 library(rmatio)
 library(tidyverse)

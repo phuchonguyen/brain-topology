@@ -1,3 +1,7 @@
+# Circle Chord Plot for Adjacency Matrix Representation of Brain Connectomes
+#
+# Author: Phuc Nguyen, Aug. 2020
+
 chord_adjmat <- function(gap.after=1.5, labeled=TRUE,
                          h.ratio=0.5, cex=0.6, A=NULL, topn=50,
                          palette="redwhiteblue", title="", legend=TRUE,

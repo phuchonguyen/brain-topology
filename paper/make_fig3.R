@@ -1,3 +1,10 @@
+# Make figure to explain how the tree representation and adjacency matrix 
+# representation shows connectivities differently
+# Figure 3 in Tree Representations of Brain Structural Connectivity via 
+# Persistent Homology by D. Li, P. Nguyen, Z. Zhang and D. Dunson
+#
+# Author: Phuc Nguyen, Aug. 2022
+
 library(dplyr)
 library(viridis)
 source("tools/chordplot.R")

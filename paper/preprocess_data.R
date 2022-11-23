@@ -1,3 +1,10 @@
+# Preprocess data for experiments in Tree Representations of 
+# Brain Structural Connectivity via Persistent Homology by D. Li, P. Nguyen,
+# Z. Zhang and D. Dunson
+#
+# Author: Phuc Nguyen, Aug. 2022
+
+
 # Libraries
 library(rmatio)
 library(R.matlab)
